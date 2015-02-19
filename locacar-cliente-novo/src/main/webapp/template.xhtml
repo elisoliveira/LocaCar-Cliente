@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" type="text/css" href="css/layout.css"/>
+    </h:head>
+    <h:body>
+        <div id="container-topo"> 
+            <div id="menu-hotizontal">
+
+                <a href="index.xhtml" style="color: #fff; font-size: 20px; padding-top: 12px; padding-left: 10px;">LocaCar</a>
+                <h:form>
+                    <h:commandButton type="submit" styleClass="btn-sair" value="Sair"/>
+                </h:form>
+
+            </div>
+        </div>
+
+        <div id="principal">
+            <div id="container-left">
+                <div id="menu-vertical">
+                    <h:form>
+                        <ul>
+                            <li><p:commandLink  value="Cadastrar Cliente" action="cadastrar_cliente.xhtml?faces-redirect=true"/></li>
+                            <li><p:commandLink  value="Cadastrar Carro" action="cadastrar_carro.xhtml?faces-redirect=true"/></li>
+                            <li><p:commandLink  value="Cadastrar locadoras" action="cadastrar_locadora.xhtml?faces-redirect=true"/></li>
+                            <li><p:commandLink  value="Realizar reserva" action="reservar_carros.xhtml?faces-redirect=true"/></li>
+                            <li><p:commandLink  value="Hotel"/></li>
+                            <li><p:commandLink  value="Passagem"/></li>
+                        </ul>
+                    </h:form>
+                </div>
+            </div>
+            <div id="container-right">
+                <div id="conteudo-ajax">
+                    <ui:insert name="conteudo" id="conteudo">
+                    </ui:insert>
+                </div>
+            </div>
+            <div id="clear-float"></div>
+        </div>
+        <div id="rodape"></div>
+    </h:body>
+</html>
+
