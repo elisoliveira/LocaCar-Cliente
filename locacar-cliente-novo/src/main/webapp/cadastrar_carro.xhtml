@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+ * @author Elis Oliveira
+-->
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
@@ -15,20 +18,25 @@
 
                     <p style="font-size: 25px; margin-top: -5px; margin-left: 20px;">Cadastrar Carro</p>
                     <p:inputText placeholder="Informe o nome" required="true" 
+                                 value="#{cadastroMB.carro.nome}"
                                  requiredMessage="Informe o nome do carro" styleClass="campo-cadastro"/>
                     <p:inputText placeholder="Informe o valor" required="true" 
+                                 value="#{cadastroMB.carro.valor}"
                                  requiredMessage="Informe o valor do carro" styleClass="campo-cadastro"/>
                     <p:inputText placeholder="Informe o ano" required="true" 
+                                 value="#{cadastroMB.carro.ano}"
                                  requiredMessage="Informe o ano do carro" styleClass="campo-cadastro"/>
                     <p:inputText placeholder="Informe a placa" required="true" 
+                                 value="#{cadastroMB.carro.placa}"
                                  requiredMessage="Informe a placa do carro" styleClass="campo-cadastro"/>
 
-                    <p:commandButton value="Cadastrar" styleClass="bt-cadastrar" icon="ui-icon-disk"/>
+                    <p:commandButton value="Cadastrar" styleClass="bt-cadastrar" icon="ui-icon-disk"
+                                     actionListener="#{cadastroMB.cadastraCarro()}" update="@form"/>
 
+                    <p:growl autoUpdate="true" life="100000"/>
                 </h:form>
             </ui:define>
         </ui:composition>
-        <p:messages closable="true" showDetail="true" showSummary="true" showIcon="true"/>
     </h:body>
 </html>
 

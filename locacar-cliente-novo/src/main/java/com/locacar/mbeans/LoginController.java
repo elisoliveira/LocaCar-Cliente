@@ -7,9 +7,6 @@ package com.locacar.mbeans;
 
 import com.locacar.dao.Dao;
 import com.locacar.dao.DaoImpl;
-import com.pos.services.Pessoa;
-import java.util.HashMap;
-import java.util.Map;
 import javax.faces.bean.ManagedBean;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -20,7 +17,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.servlet.http.HttpSession;
 import javax.transaction.UserTransaction;
-import service.Usuario;
 
 /**
  * Created on : 11/02/2015, 18:48:49
@@ -31,7 +27,7 @@ import service.Usuario;
 @RequestScoped
 public class LoginController {
 
-    @PersistenceContext(name = "SIGPRO-PU")
+    @PersistenceContext(name = "LOCACAR-CLIENTE-PU")
     private EntityManager manager;
     @Resource
     private UserTransaction transaction;

@@ -5,7 +5,6 @@
  */
 package com.locacar.dao;
 
-import com.pos.services.Pessoa;
 import java.util.List;
 import java.util.Map;
 import javax.persistence.EntityManager;
