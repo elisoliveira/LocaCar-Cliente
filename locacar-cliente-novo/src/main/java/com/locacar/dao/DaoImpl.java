@@ -32,7 +32,7 @@ public class DaoImpl implements Dao {
     }
 
     @Override
-    public void salva(Object object){
+    public void salva(Object object) {
         try {
             transaction.begin();
             manager.persist(object);
@@ -84,7 +84,7 @@ public class DaoImpl implements Dao {
                 query.setParameter(nomeParametro, parametros.get(nomeParametro));
             }
         }
-        return query.getSingleResult();
+        return query.getResultList().isEmpty() ? null : query.getResultList().get(0);
     }
 
     @Override
@@ -119,5 +119,5 @@ public class DaoImpl implements Dao {
         }
         return query.getResultList();
     }
-    
+
 }

@@ -29,13 +29,19 @@
                 <div class="navbar-collapse collapse custonNavHeaderCollapse ">
                     <h:form class="navbar-form navbar-right">
                         <div class="form-group">
-                            <p:inputText placeholder="Login" styleClass="form-control" value=""/>
+                            <p:inputText placeholder="Login" styleClass="form-control" 
+                                         value="#{loginMB.login}"/>
                         </div>
                         <div class="form-group">
-                            <p:password placeholder="Senha" styleClass="form-control" value=""/>
+                            <p:password placeholder="Senha" styleClass="form-control" 
+                                        value="#{loginMB.senha}"/>
                             &nbsp;
                         </div>
-                        <h:commandButton type="submit" styleClass="bt-logar" value="Entrar"/>
+                        <p:commandButton type="submit" styleClass="bt-logar" update="msg"
+                                         value="Entrar" action="#{loginMB.doLogin()}"/>
+                        
+                        <p:messages autoUpdate="true" closable="true"  
+                                    style="width: 482px;" id="msg"/>
                     </h:form>
                 </div>
                 <br></br>

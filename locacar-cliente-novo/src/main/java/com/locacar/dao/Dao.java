@@ -30,5 +30,5 @@ public interface Dao {
     public Object buscaObjetoComJPQLQuery(String jpqlQuery, Map<String, Object> parametros);
 
     public List buscaListaComJPQLQuery(String jpqlQuery, Map<String, Object> parametros);
-    
+
 }
