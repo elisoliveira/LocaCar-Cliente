@@ -21,7 +21,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.servlet.http.HttpSession;
 import javax.transaction.UserTransaction;
-import org.primefaces.context.RequestContext;
 
 /**
  * Created on : 11/02/2015, 18:48:49

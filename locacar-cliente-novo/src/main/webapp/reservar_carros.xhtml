@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--
  * @author Elis Oliveira
- -->
+-->
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
@@ -28,29 +28,31 @@
                 <h:form>
                     <p style="font-size: 25px; margin-top: -5px; margin-left: 20px;"  >Reservar carro</p>
 
-                    <p:dataTable style="margin-left: 20px;" value="#{reservaController.listCarrosDisponiveis}" 
-                                 var="entrada" styleClass="tabela-organizada"
+                    <p:dataTable style="margin-left: 20px;" 
+                                 value="#{reservaMB.dataModelCarrosDisponiveis}" 
+                                 var="carro" styleClass="tabela-organizada"
                                  paginator="true"  
-                                 id="carrosdisponiveis"
                                  rowsPerPageTemplate="10,15"
-                                 rows="10" emptyMessage="Nenhum processo na caixa de Entrada." >
+                                 rows="10" 
+                                 emptyMessage="Nenhum carro disponível." >
 
                         <p:column headerText="Código">
-                            <h:outputText value="#{entrada.id}" />
+                            <h:outputText value="#{carro.id}" />
                         </p:column>   
                         <p:column headerText="Nome">
-
+                            <h:outputText value="#{carro.nome}" />
                         </p:column>   
                         <p:column headerText="Valor">
-
+                            <h:outputText value="#{carro.valor}" />
+                        </p:column>   
+                        <p:column headerText="Placa">
+                            <h:outputText value="#{carro.placa}" />
                         </p:column>   
                         <p:column headerText="Reservar">
                             <p:commandButton value="Reservar" styleClass="bt-reservar" icon="ui-icon-cart"/>
-                        </p:column>   
-
+                        </p:column> 
 
                     </p:dataTable>
-
                 </h:form>
             </ui:define>
         </ui:composition>
