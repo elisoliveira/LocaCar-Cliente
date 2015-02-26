@@ -49,7 +49,9 @@
                             <h:outputText value="#{carro.placa}" />
                         </p:column>   
                         <p:column headerText="Reservar">
-                            <p:commandButton value="Reservar" styleClass="bt-reservar" icon="ui-icon-cart"/>
+                            <p:commandButton action="#{reservaMB.reservarCarro()}" 
+                                             value="Reservar"
+                                             styleClass="bt-reservar" icon="ui-icon-cart"/>
                         </p:column> 
 
                     </p:dataTable>

@@ -28,30 +28,21 @@ public interface LocaService {
 
     /**
      * 
-     * @return
-     *     returns java.util.List<com.pos.services.Carro>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getCarrosDisponiveis", targetNamespace = "http://services.pos.com/", className = "com.pos.services.GetCarrosDisponiveis")
-    @ResponseWrapper(localName = "getCarrosDisponiveisResponse", targetNamespace = "http://services.pos.com/", className = "com.pos.services.GetCarrosDisponiveisResponse")
-    @Action(input = "http://services.pos.com/LocaService/getCarrosDisponiveisRequest", output = "http://services.pos.com/LocaService/getCarrosDisponiveisResponse")
-    public List<Carro> getCarrosDisponiveis();
-
-    /**
-     * 
+     * @param arg1
      * @param arg0
      * @return
-     *     returns com.pos.services.Locadora
+     *     returns com.pos.services.Pessoa
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getLocadoraPorId", targetNamespace = "http://services.pos.com/", className = "com.pos.services.GetLocadoraPorId")
-    @ResponseWrapper(localName = "getLocadoraPorIdResponse", targetNamespace = "http://services.pos.com/", className = "com.pos.services.GetLocadoraPorIdResponse")
-    @Action(input = "http://services.pos.com/LocaService/getLocadoraPorIdRequest", output = "http://services.pos.com/LocaService/getLocadoraPorIdResponse")
-    public Locadora getLocadoraPorId(
+    @RequestWrapper(localName = "loginPessoa", targetNamespace = "http://services.pos.com/", className = "com.pos.services.LoginPessoa")
+    @ResponseWrapper(localName = "loginPessoaResponse", targetNamespace = "http://services.pos.com/", className = "com.pos.services.LoginPessoaResponse")
+    @Action(input = "http://services.pos.com/LocaService/loginPessoaRequest", output = "http://services.pos.com/LocaService/loginPessoaResponse")
+    public Pessoa loginPessoa(
         @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1);
 
     /**
      * 
@@ -67,33 +58,6 @@ public interface LocaService {
     public List<Carro> getCarrosDisponiveisPorIdLocadora(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns com.pos.services.Carro
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getCarroPorId", targetNamespace = "http://services.pos.com/", className = "com.pos.services.GetCarroPorId")
-    @ResponseWrapper(localName = "getCarroPorIdResponse", targetNamespace = "http://services.pos.com/", className = "com.pos.services.GetCarroPorIdResponse")
-    @Action(input = "http://services.pos.com/LocaService/getCarroPorIdRequest", output = "http://services.pos.com/LocaService/getCarroPorIdResponse")
-    public Carro getCarroPorId(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<com.pos.services.Locadora>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getLocadoras", targetNamespace = "http://services.pos.com/", className = "com.pos.services.GetLocadoras")
-    @ResponseWrapper(localName = "getLocadorasResponse", targetNamespace = "http://services.pos.com/", className = "com.pos.services.GetLocadorasResponse")
-    @Action(input = "http://services.pos.com/LocaService/getLocadorasRequest", output = "http://services.pos.com/LocaService/getLocadorasResponse")
-    public List<Locadora> getLocadoras();
 
     /**
      * 
@@ -115,6 +79,33 @@ public interface LocaService {
 
     /**
      * 
+     * @return
+     *     returns java.util.List<com.pos.services.Locadora>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getLocadoras", targetNamespace = "http://services.pos.com/", className = "com.pos.services.GetLocadoras")
+    @ResponseWrapper(localName = "getLocadorasResponse", targetNamespace = "http://services.pos.com/", className = "com.pos.services.GetLocadorasResponse")
+    @Action(input = "http://services.pos.com/LocaService/getLocadorasRequest", output = "http://services.pos.com/LocaService/getLocadorasResponse")
+    public List<Locadora> getLocadoras();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns com.pos.services.Carro
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getCarroPorId", targetNamespace = "http://services.pos.com/", className = "com.pos.services.GetCarroPorId")
+    @ResponseWrapper(localName = "getCarroPorIdResponse", targetNamespace = "http://services.pos.com/", className = "com.pos.services.GetCarroPorIdResponse")
+    @Action(input = "http://services.pos.com/LocaService/getCarroPorIdRequest", output = "http://services.pos.com/LocaService/getCarroPorIdResponse")
+    public Carro getCarroPorId(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
      * @param arg3
      * @param arg2
      * @param arg1
@@ -133,5 +124,32 @@ public interface LocaService {
         XMLGregorianCalendar arg2,
         @WebParam(name = "arg3", targetNamespace = "")
         XMLGregorianCalendar arg3);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns com.pos.services.Locadora
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getLocadoraPorId", targetNamespace = "http://services.pos.com/", className = "com.pos.services.GetLocadoraPorId")
+    @ResponseWrapper(localName = "getLocadoraPorIdResponse", targetNamespace = "http://services.pos.com/", className = "com.pos.services.GetLocadoraPorIdResponse")
+    @Action(input = "http://services.pos.com/LocaService/getLocadoraPorIdRequest", output = "http://services.pos.com/LocaService/getLocadoraPorIdResponse")
+    public Locadora getLocadoraPorId(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<com.pos.services.Carro>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getCarrosDisponiveis", targetNamespace = "http://services.pos.com/", className = "com.pos.services.GetCarrosDisponiveis")
+    @ResponseWrapper(localName = "getCarrosDisponiveisResponse", targetNamespace = "http://services.pos.com/", className = "com.pos.services.GetCarrosDisponiveisResponse")
+    @Action(input = "http://services.pos.com/LocaService/getCarrosDisponiveisRequest", output = "http://services.pos.com/LocaService/getCarrosDisponiveisResponse")
+    public List<Carro> getCarrosDisponiveis();
 
 }

@@ -4,12 +4,58 @@
  * @author Elis Oliveira
  -->
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
+        <style>
+
+            .bt-reservar {    
+                background: #C9302C !important;
+                color: #ffffff !important;
+                border: none !important;
+                text-shadow: none !important;
+                font-size: 14px !important;
+            }
+        </style>
     </h:head>
     <h:body>
-        Hello from Facelets
+        <ui:composition template="template.xhtml">
+            <ui:define name="conteudo">
+
+                <h:form>
+                    <p style="font-size: 25px; margin-top: -5px; margin-left: 20px;">Reserva quarto</p>
+
+                    <p:dataTable style="margin-left: 20px;" 
+                                 value="#{hotelController.dataModelQuartosDisponiveis}" 
+                                 var="quarto" styleClass="tabela-organizada"
+                                 paginator="true"  
+                                 rowsPerPageTemplate="10,15"
+                                 rows="10" 
+                                 emptyMessage="Nenhum quarto disponivel." >
+
+                        <p:column headerText="Código">
+                            <h:outputText value="#{quarto.id}" />
+                        </p:column>   
+                        <p:column headerText="Capacidade">
+                            <h:outputText value="#{quarto.capacidade}" />
+                        </p:column>   
+                        <p:column headerText="Valor">
+                            <h:outputText value="#{quarto.valor}" />
+                        </p:column>    
+                        <p:column headerText="Reservar">
+                            <p:commandButton action="#{hotelController.reservarQuarto()}" 
+                                             value="Reservar"
+                                             styleClass="bt-reservar" icon="ui-icon-cart"/>
+                        </p:column> 
+
+                    </p:dataTable>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+
     </h:body>
 </html>
 

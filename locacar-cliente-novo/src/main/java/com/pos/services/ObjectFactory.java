@@ -24,22 +24,70 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _AtualizarEndereco_QNAME = new QName("http://services.pos.com/", "atualizarEndereco");
+    private final static QName _LoginPessoaResponse_QNAME = new QName("http://services.pos.com/", "loginPessoaResponse");
+    private final static QName _GetLocadoraPorId_QNAME = new QName("http://services.pos.com/", "getLocadoraPorId");
+    private final static QName _LoginPessoa_QNAME = new QName("http://services.pos.com/", "loginPessoa");
+    private final static QName _GetCarroPorIdResponse_QNAME = new QName("http://services.pos.com/", "getCarroPorIdResponse");
+    private final static QName _GetLocadorasResponse_QNAME = new QName("http://services.pos.com/", "getLocadorasResponse");
     private final static QName _OnConstructResponse_QNAME = new QName("http://services.pos.com/", "onConstructResponse");
-    private final static QName _CadastrarEndereco_QNAME = new QName("http://services.pos.com/", "cadastrarEndereco");
+    private final static QName _GetLocadoraPorIdResponse_QNAME = new QName("http://services.pos.com/", "getLocadoraPorIdResponse");
     private final static QName _OnDestroy_QNAME = new QName("http://services.pos.com/", "onDestroy");
-    private final static QName _ExcluirEndereco_QNAME = new QName("http://services.pos.com/", "excluirEndereco");
-    private final static QName _AtualizarEnderecoResponse_QNAME = new QName("http://services.pos.com/", "atualizarEnderecoResponse");
-    private final static QName _CadastrarEnderecoResponse_QNAME = new QName("http://services.pos.com/", "cadastrarEnderecoResponse");
-    private final static QName _ExcluirEnderecoResponse_QNAME = new QName("http://services.pos.com/", "excluirEnderecoResponse");
+    private final static QName _GetLocadoras_QNAME = new QName("http://services.pos.com/", "getLocadoras");
     private final static QName _OnConstruct_QNAME = new QName("http://services.pos.com/", "onConstruct");
+    private final static QName _ReservarCarroResponse_QNAME = new QName("http://services.pos.com/", "reservarCarroResponse");
+    private final static QName _GetCarrosDisponiveisResponse_QNAME = new QName("http://services.pos.com/", "getCarrosDisponiveisResponse");
     private final static QName _OnDestroyResponse_QNAME = new QName("http://services.pos.com/", "onDestroyResponse");
+    private final static QName _ReservarCarro_QNAME = new QName("http://services.pos.com/", "reservarCarro");
+    private final static QName _GetCarroPorId_QNAME = new QName("http://services.pos.com/", "getCarroPorId");
+    private final static QName _GetCarrosDisponiveisPorIdLocadora_QNAME = new QName("http://services.pos.com/", "getCarrosDisponiveisPorIdLocadora");
+    private final static QName _GetCarrosDisponiveis_QNAME = new QName("http://services.pos.com/", "getCarrosDisponiveis");
+    private final static QName _GetCarrosDisponiveisPorIdLocadoraResponse_QNAME = new QName("http://services.pos.com/", "getCarrosDisponiveisPorIdLocadoraResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.pos.services
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link GetCarrosDisponiveisPorIdLocadoraResponse }
+     * 
+     */
+    public GetCarrosDisponiveisPorIdLocadoraResponse createGetCarrosDisponiveisPorIdLocadoraResponse() {
+        return new GetCarrosDisponiveisPorIdLocadoraResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetCarrosDisponiveis }
+     * 
+     */
+    public GetCarrosDisponiveis createGetCarrosDisponiveis() {
+        return new GetCarrosDisponiveis();
+    }
+
+    /**
+     * Create an instance of {@link GetCarrosDisponiveisPorIdLocadora }
+     * 
+     */
+    public GetCarrosDisponiveisPorIdLocadora createGetCarrosDisponiveisPorIdLocadora() {
+        return new GetCarrosDisponiveisPorIdLocadora();
+    }
+
+    /**
+     * Create an instance of {@link ReservarCarroResponse }
+     * 
+     */
+    public ReservarCarroResponse createReservarCarroResponse() {
+        return new ReservarCarroResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetCarrosDisponiveisResponse }
+     * 
+     */
+    public GetCarrosDisponiveisResponse createGetCarrosDisponiveisResponse() {
+        return new GetCarrosDisponiveisResponse();
     }
 
     /**
@@ -51,27 +99,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CadastrarEnderecoResponse }
+     * Create an instance of {@link ReservarCarro }
      * 
      */
-    public CadastrarEnderecoResponse createCadastrarEnderecoResponse() {
-        return new CadastrarEnderecoResponse();
+    public ReservarCarro createReservarCarro() {
+        return new ReservarCarro();
     }
 
     /**
-     * Create an instance of {@link AtualizarEnderecoResponse }
+     * Create an instance of {@link GetCarroPorId }
      * 
      */
-    public AtualizarEnderecoResponse createAtualizarEnderecoResponse() {
-        return new AtualizarEnderecoResponse();
+    public GetCarroPorId createGetCarroPorId() {
+        return new GetCarroPorId();
     }
 
     /**
-     * Create an instance of {@link ExcluirEnderecoResponse }
+     * Create an instance of {@link GetLocadoras }
      * 
      */
-    public ExcluirEnderecoResponse createExcluirEnderecoResponse() {
-        return new ExcluirEnderecoResponse();
+    public GetLocadoras createGetLocadoras() {
+        return new GetLocadoras();
     }
 
     /**
@@ -91,11 +139,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CadastrarEndereco }
+     * Create an instance of {@link GetLocadoraPorIdResponse }
      * 
      */
-    public CadastrarEndereco createCadastrarEndereco() {
-        return new CadastrarEndereco();
+    public GetLocadoraPorIdResponse createGetLocadoraPorIdResponse() {
+        return new GetLocadoraPorIdResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetLocadorasResponse }
+     * 
+     */
+    public GetLocadorasResponse createGetLocadorasResponse() {
+        return new GetLocadorasResponse();
     }
 
     /**
@@ -107,19 +163,51 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ExcluirEndereco }
+     * Create an instance of {@link GetLocadoraPorId }
      * 
      */
-    public ExcluirEndereco createExcluirEndereco() {
-        return new ExcluirEndereco();
+    public GetLocadoraPorId createGetLocadoraPorId() {
+        return new GetLocadoraPorId();
     }
 
     /**
-     * Create an instance of {@link AtualizarEndereco }
+     * Create an instance of {@link LoginPessoaResponse }
      * 
      */
-    public AtualizarEndereco createAtualizarEndereco() {
-        return new AtualizarEndereco();
+    public LoginPessoaResponse createLoginPessoaResponse() {
+        return new LoginPessoaResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetCarroPorIdResponse }
+     * 
+     */
+    public GetCarroPorIdResponse createGetCarroPorIdResponse() {
+        return new GetCarroPorIdResponse();
+    }
+
+    /**
+     * Create an instance of {@link LoginPessoa }
+     * 
+     */
+    public LoginPessoa createLoginPessoa() {
+        return new LoginPessoa();
+    }
+
+    /**
+     * Create an instance of {@link Pessoa }
+     * 
+     */
+    public Pessoa createPessoa() {
+        return new Pessoa();
+    }
+
+    /**
+     * Create an instance of {@link Carro }
+     * 
+     */
+    public Carro createCarro() {
+        return new Carro();
     }
 
     /**
@@ -131,12 +219,56 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtualizarEndereco }{@code >}}
+     * Create an instance of {@link Locadora }
      * 
      */
-    @XmlElementDecl(namespace = "http://services.pos.com/", name = "atualizarEndereco")
-    public JAXBElement<AtualizarEndereco> createAtualizarEndereco(AtualizarEndereco value) {
-        return new JAXBElement<AtualizarEndereco>(_AtualizarEndereco_QNAME, AtualizarEndereco.class, null, value);
+    public Locadora createLocadora() {
+        return new Locadora();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LoginPessoaResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services.pos.com/", name = "loginPessoaResponse")
+    public JAXBElement<LoginPessoaResponse> createLoginPessoaResponse(LoginPessoaResponse value) {
+        return new JAXBElement<LoginPessoaResponse>(_LoginPessoaResponse_QNAME, LoginPessoaResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetLocadoraPorId }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services.pos.com/", name = "getLocadoraPorId")
+    public JAXBElement<GetLocadoraPorId> createGetLocadoraPorId(GetLocadoraPorId value) {
+        return new JAXBElement<GetLocadoraPorId>(_GetLocadoraPorId_QNAME, GetLocadoraPorId.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LoginPessoa }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services.pos.com/", name = "loginPessoa")
+    public JAXBElement<LoginPessoa> createLoginPessoa(LoginPessoa value) {
+        return new JAXBElement<LoginPessoa>(_LoginPessoa_QNAME, LoginPessoa.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetCarroPorIdResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services.pos.com/", name = "getCarroPorIdResponse")
+    public JAXBElement<GetCarroPorIdResponse> createGetCarroPorIdResponse(GetCarroPorIdResponse value) {
+        return new JAXBElement<GetCarroPorIdResponse>(_GetCarroPorIdResponse_QNAME, GetCarroPorIdResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetLocadorasResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services.pos.com/", name = "getLocadorasResponse")
+    public JAXBElement<GetLocadorasResponse> createGetLocadorasResponse(GetLocadorasResponse value) {
+        return new JAXBElement<GetLocadorasResponse>(_GetLocadorasResponse_QNAME, GetLocadorasResponse.class, null, value);
     }
 
     /**
@@ -149,12 +281,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CadastrarEndereco }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetLocadoraPorIdResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://services.pos.com/", name = "cadastrarEndereco")
-    public JAXBElement<CadastrarEndereco> createCadastrarEndereco(CadastrarEndereco value) {
-        return new JAXBElement<CadastrarEndereco>(_CadastrarEndereco_QNAME, CadastrarEndereco.class, null, value);
+    @XmlElementDecl(namespace = "http://services.pos.com/", name = "getLocadoraPorIdResponse")
+    public JAXBElement<GetLocadoraPorIdResponse> createGetLocadoraPorIdResponse(GetLocadoraPorIdResponse value) {
+        return new JAXBElement<GetLocadoraPorIdResponse>(_GetLocadoraPorIdResponse_QNAME, GetLocadoraPorIdResponse.class, null, value);
     }
 
     /**
@@ -167,39 +299,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ExcluirEndereco }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetLocadoras }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://services.pos.com/", name = "excluirEndereco")
-    public JAXBElement<ExcluirEndereco> createExcluirEndereco(ExcluirEndereco value) {
-        return new JAXBElement<ExcluirEndereco>(_ExcluirEndereco_QNAME, ExcluirEndereco.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtualizarEnderecoResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://services.pos.com/", name = "atualizarEnderecoResponse")
-    public JAXBElement<AtualizarEnderecoResponse> createAtualizarEnderecoResponse(AtualizarEnderecoResponse value) {
-        return new JAXBElement<AtualizarEnderecoResponse>(_AtualizarEnderecoResponse_QNAME, AtualizarEnderecoResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CadastrarEnderecoResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://services.pos.com/", name = "cadastrarEnderecoResponse")
-    public JAXBElement<CadastrarEnderecoResponse> createCadastrarEnderecoResponse(CadastrarEnderecoResponse value) {
-        return new JAXBElement<CadastrarEnderecoResponse>(_CadastrarEnderecoResponse_QNAME, CadastrarEnderecoResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ExcluirEnderecoResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://services.pos.com/", name = "excluirEnderecoResponse")
-    public JAXBElement<ExcluirEnderecoResponse> createExcluirEnderecoResponse(ExcluirEnderecoResponse value) {
-        return new JAXBElement<ExcluirEnderecoResponse>(_ExcluirEnderecoResponse_QNAME, ExcluirEnderecoResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://services.pos.com/", name = "getLocadoras")
+    public JAXBElement<GetLocadoras> createGetLocadoras(GetLocadoras value) {
+        return new JAXBElement<GetLocadoras>(_GetLocadoras_QNAME, GetLocadoras.class, null, value);
     }
 
     /**
@@ -212,12 +317,75 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReservarCarroResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services.pos.com/", name = "reservarCarroResponse")
+    public JAXBElement<ReservarCarroResponse> createReservarCarroResponse(ReservarCarroResponse value) {
+        return new JAXBElement<ReservarCarroResponse>(_ReservarCarroResponse_QNAME, ReservarCarroResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetCarrosDisponiveisResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services.pos.com/", name = "getCarrosDisponiveisResponse")
+    public JAXBElement<GetCarrosDisponiveisResponse> createGetCarrosDisponiveisResponse(GetCarrosDisponiveisResponse value) {
+        return new JAXBElement<GetCarrosDisponiveisResponse>(_GetCarrosDisponiveisResponse_QNAME, GetCarrosDisponiveisResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link OnDestroyResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://services.pos.com/", name = "onDestroyResponse")
     public JAXBElement<OnDestroyResponse> createOnDestroyResponse(OnDestroyResponse value) {
         return new JAXBElement<OnDestroyResponse>(_OnDestroyResponse_QNAME, OnDestroyResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReservarCarro }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services.pos.com/", name = "reservarCarro")
+    public JAXBElement<ReservarCarro> createReservarCarro(ReservarCarro value) {
+        return new JAXBElement<ReservarCarro>(_ReservarCarro_QNAME, ReservarCarro.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetCarroPorId }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services.pos.com/", name = "getCarroPorId")
+    public JAXBElement<GetCarroPorId> createGetCarroPorId(GetCarroPorId value) {
+        return new JAXBElement<GetCarroPorId>(_GetCarroPorId_QNAME, GetCarroPorId.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetCarrosDisponiveisPorIdLocadora }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services.pos.com/", name = "getCarrosDisponiveisPorIdLocadora")
+    public JAXBElement<GetCarrosDisponiveisPorIdLocadora> createGetCarrosDisponiveisPorIdLocadora(GetCarrosDisponiveisPorIdLocadora value) {
+        return new JAXBElement<GetCarrosDisponiveisPorIdLocadora>(_GetCarrosDisponiveisPorIdLocadora_QNAME, GetCarrosDisponiveisPorIdLocadora.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetCarrosDisponiveis }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services.pos.com/", name = "getCarrosDisponiveis")
+    public JAXBElement<GetCarrosDisponiveis> createGetCarrosDisponiveis(GetCarrosDisponiveis value) {
+        return new JAXBElement<GetCarrosDisponiveis>(_GetCarrosDisponiveis_QNAME, GetCarrosDisponiveis.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetCarrosDisponiveisPorIdLocadoraResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services.pos.com/", name = "getCarrosDisponiveisPorIdLocadoraResponse")
+    public JAXBElement<GetCarrosDisponiveisPorIdLocadoraResponse> createGetCarrosDisponiveisPorIdLocadoraResponse(GetCarrosDisponiveisPorIdLocadoraResponse value) {
+        return new JAXBElement<GetCarrosDisponiveisPorIdLocadoraResponse>(_GetCarrosDisponiveisPorIdLocadoraResponse_QNAME, GetCarrosDisponiveisPorIdLocadoraResponse.class, null, value);
     }
 
 }

@@ -22,6 +22,12 @@
                     <p:inputText placeholder="Informe o CPF" required="true" 
                                  value="#{cadastroMB.pessoa.documento}"
                                  requiredMessage="Informe o CPF da pessoa" styleClass="campo-cadastro"/>
+                    <p:inputText placeholder="Informe o seu login" required="true" 
+                                 value="#{cadastroMB.pessoa.login}"
+                                 requiredMessage="Informe o login" styleClass="campo-cadastro"/>
+                    <p:password placeholder="Informe sua senha" required="true" 
+                                 value="#{cadastroMB.pessoa.senha}"
+                                 requiredMessage="Informe a senha" styleClass="campo-cadastro"/>
 
                     <p:commandButton value="Cadastrar" styleClass="bt-cadastrar" icon="ui-icon-disk"
                                      actionListener="#{cadastroMB.cadastraPessoa()}" update="@form"/>

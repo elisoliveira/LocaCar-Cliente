@@ -5,22 +5,18 @@
  */
 package com.locacar.mbeans;
 
-import com.locacar.dao.Dao;
-import com.locacar.dao.DaoImpl;
-import com.locacar.entidades.Pessoa;
+import com.pos.services.LocaService;
+import com.pos.services.LocaService_Service;
+import com.pos.services.Pessoa;
 import java.util.HashMap;
 import java.util.Map;
 import javax.faces.bean.ManagedBean;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import javax.annotation.Resource;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import javax.servlet.http.HttpSession;
-import javax.transaction.UserTransaction;
 
 /**
  * Created on : 11/02/2015, 18:48:49
@@ -30,15 +26,16 @@ import javax.transaction.UserTransaction;
 @ManagedBean(name = "loginMB")
 @RequestScoped
 public class LoginController {
-
-    @PersistenceContext(name = "LOCACAR-CLIENTE-PU")
-    private EntityManager manager;
-    @Resource
-    private UserTransaction transaction;
-    private Dao dao;
     private String login;
     private String senha;
+    
+    private LocaService locaService;
 
+    public LoginController() {
+        LocaService_Service service = new LocaService_Service();
+        this.locaService = service.getLocaServicePort();
+    } 
+    
     public String getLogin() {
         return login;
     }
@@ -57,10 +54,7 @@ public class LoginController {
 
     public String doLogin() {
         Map<String, Object> map = new HashMap<String, Object>();
-        map.put("login", login);
-        map.put("senha", senha);
-            
-        Object pessoaEncontrada = dao.buscaObjetoComNamedQuery(Pessoa.BUSCAR_LOGIN_SENHA, map);
+        Pessoa pessoaEncontrada = locaService.loginPessoa(login, senha);
         if (pessoaEncontrada == null) {
             System.out.println("usuario nulo");
             FacesContext.getCurrentInstance().addMessage(null,
@@ -73,7 +67,6 @@ public class LoginController {
             session.setAttribute("usuarioLogado", pessoaEncontrada);
             return "home.xhtml?faces-redirect=true";
         }
-
     }
     
     public String logout() {
@@ -82,16 +75,4 @@ public class LoginController {
         System.out.println("deslogou");
         return "index.xhtml?faces-redirect=true";
     }
-
-    @PostConstruct
-    public void onConstruct() {
-        dao = new DaoImpl(manager, transaction);
-    }
-
-    @PreDestroy
-    public void onDestroy() {
-        manager = null;
-        dao = null;
-    }
-
 }
