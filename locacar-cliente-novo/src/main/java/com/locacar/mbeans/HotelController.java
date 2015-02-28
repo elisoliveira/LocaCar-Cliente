@@ -5,6 +5,7 @@
  */
 package com.locacar.mbeans;
 
+import br.com.pos.hotel.services.Hotel;
 import br.com.pos.hotel.services.Quarto;
 import br.com.pos.hotel.services.ReservaService;
 import br.com.pos.hotel.services.ReservaServiceService;

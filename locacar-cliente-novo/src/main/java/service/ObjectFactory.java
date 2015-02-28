@@ -25,6 +25,7 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _GetUsuario_QNAME = new QName("http://service/", "getUsuario");
+    private final static QName _GetVooPorIdResponse_QNAME = new QName("http://service/", "getVooPorIdResponse");
     private final static QName _GetAdministrador_QNAME = new QName("http://service/", "getAdministrador");
     private final static QName _VenderPassagem_QNAME = new QName("http://service/", "venderPassagem");
     private final static QName _GetCidades_QNAME = new QName("http://service/", "getCidades");
@@ -35,6 +36,7 @@ public class ObjectFactory {
     private final static QName _GetCidadesResponse_QNAME = new QName("http://service/", "getCidadesResponse");
     private final static QName _GetVooResponse_QNAME = new QName("http://service/", "getVooResponse");
     private final static QName _GetVoo_QNAME = new QName("http://service/", "getVoo");
+    private final static QName _GetVooPorId_QNAME = new QName("http://service/", "getVooPorId");
     private final static QName _GetAdministradorResponse_QNAME = new QName("http://service/", "getAdministradorResponse");
     private final static QName _SalvarUsuario_QNAME = new QName("http://service/", "salvarUsuario");
     private final static QName _GetVoosPorData_QNAME = new QName("http://service/", "getVoosPorData");
@@ -94,6 +96,14 @@ public class ObjectFactory {
      */
     public GetVoo createGetVoo() {
         return new GetVoo();
+    }
+
+    /**
+     * Create an instance of {@link GetVooPorId }
+     * 
+     */
+    public GetVooPorId createGetVooPorId() {
+        return new GetVooPorId();
     }
 
     /**
@@ -169,6 +179,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetVooPorIdResponse }
+     * 
+     */
+    public GetVooPorIdResponse createGetVooPorIdResponse() {
+        return new GetVooPorIdResponse();
+    }
+
+    /**
      * Create an instance of {@link GetUsuario }
      * 
      */
@@ -223,6 +241,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://service/", name = "getUsuario")
     public JAXBElement<GetUsuario> createGetUsuario(GetUsuario value) {
         return new JAXBElement<GetUsuario>(_GetUsuario_QNAME, GetUsuario.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetVooPorIdResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service/", name = "getVooPorIdResponse")
+    public JAXBElement<GetVooPorIdResponse> createGetVooPorIdResponse(GetVooPorIdResponse value) {
+        return new JAXBElement<GetVooPorIdResponse>(_GetVooPorIdResponse_QNAME, GetVooPorIdResponse.class, null, value);
     }
 
     /**
@@ -313,6 +340,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://service/", name = "getVoo")
     public JAXBElement<GetVoo> createGetVoo(GetVoo value) {
         return new JAXBElement<GetVoo>(_GetVoo_QNAME, GetVoo.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetVooPorId }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service/", name = "getVooPorId")
+    public JAXBElement<GetVooPorId> createGetVooPorId(GetVooPorId value) {
+        return new JAXBElement<GetVooPorId>(_GetVooPorId_QNAME, GetVooPorId.class, null, value);
     }
 
     /**
